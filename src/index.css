@@ -1,0 +1,113 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Color Theme with Gradients */
+@layer base {
+  * {
+    @apply border-gray-700;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans;
+    background-attachment: fixed;
+  }
+
+  code {
+    @apply bg-gradient-to-r from-blue-900/50 to-purple-900/50 px-3 py-1.5 rounded-lg text-sm font-mono text-blue-200 border border-blue-500/30;
+  }
+
+  pre {
+    @apply bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl overflow-x-auto text-gray-300 border border-gray-700 shadow-2xl;
+  }
+}
+
+/* Custom scrollbar with gradient */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+/* Code highlighting with colors */
+.hljs {
+  @apply bg-gradient-to-br from-gray-900 to-black text-gray-100 p-6 rounded-xl border border-gray-700;
+}
+
+/* Modern card styling */
+.post-card {
+  @apply bg-gradient-to-br from-gray-900/80 to-gray-800/60 border border-gray-700/50 backdrop-blur-lg;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.post-card:hover {
+  @apply border-blue-500/50;
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+}
+
+/* Glassmorphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Vote button animations */
+.vote-button {
+  @apply transition-all duration-300 hover:scale-110;
+}
+
+.vote-button:hover {
+  @apply shadow-lg;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated border */
+@keyframes border-flow {
+  0%, 100% { border-color: #3b82f6; }
+  33% { border-color: #8b5cf6; }
+  66% { border-color: #ec4899; }
+}
+
+.animated-border {
+  animation: border-flow 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse glow effect */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.5); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
